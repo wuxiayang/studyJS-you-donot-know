@@ -52,3 +52,18 @@ var obj = { count: 0,
 obj.cool(); // 很酷吧 ?
 // 箭头函数在涉及 this 绑定时的行为和普通函数的行为完全不一致。它放弃了所 有普通 this 绑定的规则，
 // 取而代之的是用当前的词法作用域覆盖了 this 本来的值
+
+// 在我看来，解决这个“问题”的另一个更合适的办法是正确使用和包含 this 机制。
+var obj = {
+  count: 0,
+  cool: function coolFn() {
+      if (this.count < 1) {
+        setTimeout( function timer(){
+        this.count++; // this 是安全的
+        // 因为 bind(..)
+        console.log( "more awesome" );
+      }.bind( this ), 100 ); // look, bind()!
+    }
+  }
+};
+obj.cool(); // 更酷了
