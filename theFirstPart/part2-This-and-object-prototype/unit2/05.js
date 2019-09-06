@@ -46,4 +46,4 @@ console.log( obj1.a ); // 2
 console.log( baz.a ); // 3
 // bar 被硬绑定到 obj1 上，但是 new bar(3) 并没有像我们预计的那样把 obj1.a修改为 3。
 // 相反， new 修改了硬绑定（到 obj1 的）调用 bar(..) 中的 this 。
-// 因为使用了new 绑定，我们得到了一个名字为 baz 的新对象，并且 baz.a 的值是 3
+// 因为使用了new 绑定，我们得到了一个名字为 baz 的新对象，并且 baz.a 的值是 3     
