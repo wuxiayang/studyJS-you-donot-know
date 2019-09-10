@@ -1,4 +1,5 @@
 // 有一个列表['aababbc','badabcab']，去除列表中的‘ab’；需要同样适配其他同类列表，例如['aaababbbc','badabcab']
+//解法一
 function splitAB(array){
    if (array.length>0){
     array.forEach(
@@ -25,10 +26,11 @@ var list=['aababbc','badabcab'];
 splitAB(list);
 console.log(list);
 
-
+//解法二
 var arr =['aababbc','badabcab'];
 // var arr = ['aaababbbc','badabcaba'];
 var str = JSON.stringify(arr);
-console.log(str.replace(/a[ab]+b|ab/g,''))
+console.log(str.replace(/a[ab]+b|ab/g,''));
 
+//解法三
 console.log(JSON.stringify(['aababbc','badabcab']).replace(/a[ab]+b|ab/g,''))
