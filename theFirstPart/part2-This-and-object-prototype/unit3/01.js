@@ -24,3 +24,11 @@ var list=['aababbc','badabcab'];
 // var list=['aaababbbc','badabcaba'];
 splitAB(list);
 console.log(list);
+
+
+var arr =['aababbc','badabcab'];
+// var arr = ['aaababbbc','badabcaba'];
+var str = JSON.stringify(arr);
+console.log(str.replace(/a[ab]+b|ab/g,''))
+
+console.log(JSON.stringify(['aababbc','badabcab']).replace(/a[ab]+b|ab/g,''))
